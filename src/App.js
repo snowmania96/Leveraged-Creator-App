@@ -1,5 +1,5 @@
-import './App.css';
-import TradeInForm from './TradeInForm';
+import "./App.css";
+import TradeInForm from "./TradeInForm";
 
 function App() {
   return (
