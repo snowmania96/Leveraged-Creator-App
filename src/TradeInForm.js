@@ -18,6 +18,7 @@ const customInputStyle = {
 
 const authKey = process.env.REACT_APP_AUTHKEY;
 const webhookUrl = process.env.REACT_APP_WEBHOOK_URL;
+const endurl = process.env.REACT_APP_END_URL;
 
 const api = axios.create({
   baseURL: "https://api.vehicledatabases.com",
@@ -172,8 +173,7 @@ export default function TradeInForm() {
           const payload = { marketValue: jsonObject, form_data: formData };
           const webhookRes = await axios.post(webhookUrl, payload);
           if (webhookRes.status === 200) {
-            window.location.href =
-              "https://trade-in.airparkdodgechryslerjeeps.com/#done";
+            window.location.href = endurl;
           }
           console.log(webhookRes);
         });
